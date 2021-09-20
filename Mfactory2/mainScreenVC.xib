@@ -35,14 +35,14 @@
                     </connections>
                 </slider>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-kz-EdG">
-                    <rect key="frame" x="159" y="518" width="96" height="51"/>
+                    <rect key="frame" x="144.5" y="518" width="125" height="51"/>
                     <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="51" id="3lL-s1-RoB"/>
-                        <constraint firstAttribute="width" constant="96" id="45S-9A-84X"/>
+                        <constraint firstAttribute="width" constant="125" id="45S-9A-84X"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <state key="normal" title="Начать"/>
+                    <state key="normal" title="Сохранить"/>
                     <connections>
                         <action selector="startButton:" destination="-1" eventType="touchUpInside" id="C0W-Gr-nwR"/>
                     </connections>

@@ -9,13 +9,15 @@ import UIKit
 
 class rootScreen: UIViewController {
 
+    var countTaskTemp = 5 //количество вопросов по умолчанию, в эту же переменную хочу получать значение с синего экрана настроек
     
     
+
     @IBAction func multiplyByOneButton(_ sender: Any) {
     }
     
     @IBAction func startButton(_ sender: UIButton) {
-        let tvc = TableViewController(numberOfQuestions: 10, nibName: "TableViewController", bundle: nil)
+        let tvc = TableViewController(numberOfQuestions: countTaskTemp, nibName: "TableViewController", bundle: nil)
         self.navigationController?.pushViewController(tvc, animated: true)
     }
     
@@ -35,6 +37,12 @@ class rootScreen: UIViewController {
     }
     @objc func tapSettingButton() {
         let msvc = mainScreenVC()
+        msvc.result = { [weak self] count in
+            print("Кол-во заданий, которое выбрали: \(count)")
+            self?.countTaskTemp = count
+            msvc.navigationController?.popViewController(animated: true)
+        }
+        
         self.navigationController?.pushViewController(msvc, animated: true)
     }
 

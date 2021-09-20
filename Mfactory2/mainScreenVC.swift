@@ -22,18 +22,23 @@ class mainScreenVC: UIViewController {
         }
     }
     
+    // Замыкание, которое будем вызывать на экране с которого отображаем этот экран
+    var result: ((Int) -> Void)?
+    
     @IBAction func sliderTaskChange(_ sender: UISlider) {
         let countTask = Int(round(sender.value))
         countTaskLabel.text = "\(countTask)"
         countTaskTemp = countTask
     }
     @IBAction func startButton(_ sender: UIButton) {
-        let tableVC = TableViewController(numberOfQuestions: countTaskTemp, nibName: "TableViewController", bundle: nil)
- 
-        tableVC.modalPresentationStyle = .overFullScreen
-        tableVC.modalTransitionStyle = self.modalTransitionStyle
-        
-        self.present(tableVC, animated: true, completion: nil)
+        result?(countTaskTemp)
+            
+//                let tableVC = TableViewController(numberOfQuestions: countTaskTemp, nibName: "TableViewController", bundle: nil)
+//
+//        tableVC.modalPresentationStyle = .overFullScreen
+//        tableVC.modalTransitionStyle = self.modalTransitionStyle
+//
+//        self.present(tableVC, animated: true, completion: nil)
         
         // show(tableVC, sender: nil) //идентифкатор Segue
     
