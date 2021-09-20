@@ -19,6 +19,8 @@
 		CC76F4CC26EB2FAC00C74968 /* mainScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC76F4CA26EB2FAC00C74968 /* mainScreenVC.xib */; };
 		CC76F4CF26F3664C00C74968 /* rootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4CD26F3664B00C74968 /* rootScreen.swift */; };
 		CC76F4D026F3664C00C74968 /* rootScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC76F4CE26F3664B00C74968 /* rootScreen.xib */; };
+		CC76F4D326F8FA3400C74968 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4D226F8FA3300C74968 /* extension.swift */; };
+		CC76F4D526F906F400C74968 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4D426F906F400C74968 /* data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CC76F4CA26EB2FAC00C74968 /* mainScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mainScreenVC.xib; sourceTree = "<group>"; };
 		CC76F4CD26F3664B00C74968 /* rootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rootScreen.swift; sourceTree = "<group>"; };
 		CC76F4CE26F3664B00C74968 /* rootScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rootScreen.xib; sourceTree = "<group>"; };
+		CC76F4D226F8FA3300C74968 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		CC76F4D426F906F400C74968 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 		CC76F49526E9D7CD00C74968 = {
 			isa = PBXGroup;
 			children = (
+				CC76F4D426F906F400C74968 /* data.swift */,
+				CC76F4D226F8FA3300C74968 /* extension.swift */,
 				CC76F4A026E9D7CD00C74968 /* Mfactory2 */,
 				CC76F49F26E9D7CD00C74968 /* Products */,
 			);
@@ -159,11 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC76F4C226EA043500C74968 /* AppDelegate.swift in Sources */,
+				CC76F4D326F8FA3400C74968 /* extension.swift in Sources */,
 				CC76F4C026E9FB8700C74968 /* SceneDelegate.swift in Sources */,
 				CC76F4BA26E9D8E000C74968 /* TableViewCell.swift in Sources */,
 				CC76F4CB26EB2FAC00C74968 /* mainScreenVC.swift in Sources */,
 				CC76F4CF26F3664C00C74968 /* rootScreen.swift in Sources */,
 				CC76F4B926E9D8E000C74968 /* TableViewController.swift in Sources */,
+				CC76F4D526F906F400C74968 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="rootScreen" customModule="Mfactory2" customModuleProvider="target">
             <connections>
+                <outlet property="textOnBoardLabel" destination="dz0-k2-YNk" id="MJc-vc-foK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,7 +30,7 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="K8I-Ed-Ux1">
-                    <rect key="frame" x="24" y="636" width="366" height="72"/>
+                    <rect key="frame" x="24" y="635.5" width="366" height="72"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wX-bQ-ra9">
                             <rect key="frame" x="0.0" y="0.0" width="70" height="72"/>
@@ -47,6 +48,9 @@
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <state key="highlighted" image="2" backgroundImage="button_a"/>
+                            <connections>
+                                <action selector="multiplyByTwoButton:" destination="-1" eventType="touchUpInside" id="GyK-2h-xbk"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUC-ZP-tdI">
                             <rect key="frame" x="148" y="0.0" width="70" height="72"/>
@@ -54,6 +58,9 @@
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <state key="highlighted" image="3" backgroundImage="button_a"/>
+                            <connections>
+                                <action selector="multiplyByThreeButton:" destination="-1" eventType="touchUpInside" id="NGp-wO-iQg"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmF-Lz-dO2">
                             <rect key="frame" x="222" y="0.0" width="70" height="72"/>
@@ -61,6 +68,9 @@
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <state key="highlighted" image="4" backgroundImage="button_a"/>
+                            <connections>
+                                <action selector="multiplyByFourButton:" destination="-1" eventType="touchUpInside" id="A2x-fM-wxY"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1l0-e5-vGl">
                             <rect key="frame" x="296" y="0.0" width="70" height="72"/>
@@ -68,39 +78,54 @@
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <state key="highlighted" image="5" backgroundImage="button_a"/>
+                            <connections>
+                                <action selector="multiplyByFiveButton:" destination="-1" eventType="touchUpInside" id="lJB-NQ-F3L"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hiN-jX-9Kg">
-                    <rect key="frame" x="61" y="712" width="292" height="72"/>
+                    <rect key="frame" x="61" y="711.5" width="292" height="72.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZI-ke-t8u">
-                            <rect key="frame" x="0.0" y="0.0" width="70" height="72"/>
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="72.5"/>
                             <state key="normal" image="6" backgroundImage="button_n">
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <state key="highlighted" image="6" backgroundImage="button_a"/>
+                            <connections>
+                                <action selector="multiplyBySixButton:" destination="-1" eventType="touchUpInside" id="l3h-wl-ksa"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgX-zg-zSE">
-                            <rect key="frame" x="74" y="0.0" width="70" height="72"/>
+                            <rect key="frame" x="74" y="0.0" width="70" height="72.5"/>
                             <state key="normal" image="7" backgroundImage="button_n">
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <state key="highlighted" image="7" backgroundImage="button_a"/>
+                            <connections>
+                                <action selector="multiplyBySevenButton:" destination="-1" eventType="touchUpInside" id="WzK-oY-Xm1"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WL-Xp-f0G">
-                            <rect key="frame" x="148" y="0.0" width="70" height="72"/>
+                            <rect key="frame" x="148" y="0.0" width="70" height="72.5"/>
                             <state key="normal" image="8" backgroundImage="button_n">
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <state key="highlighted" image="8" backgroundImage="button_a"/>
+                            <connections>
+                                <action selector="multiplyByEightButton:" destination="-1" eventType="touchUpInside" id="AXq-GN-TPk"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNo-6Z-onn">
-                            <rect key="frame" x="222" y="0.0" width="70" height="72"/>
+                            <rect key="frame" x="222" y="0.0" width="70" height="72.5"/>
                             <state key="normal" image="9" backgroundImage="button_n">
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <state key="highlighted" image="9" backgroundImage="button_a"/>
+                            <connections>
+                                <action selector="multiplyByNineButton:" destination="-1" eventType="touchUpInside" id="aaa-lw-9iT"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -117,17 +142,28 @@
                         <action selector="startButton:" destination="-1" eventType="touchUpInside" id="ugK-RU-TDm"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz0-k2-YNk">
+                    <rect key="frame" x="43.5" y="111.5" width="327" height="491"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6im-mK-X2R" secondAttribute="trailing" id="6Im-By-8PM"/>
+                <constraint firstItem="dz0-k2-YNk" firstAttribute="height" secondItem="eSi-qO-Pd1" secondAttribute="height" multiplier="0.93346" id="Ala-en-J3C"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="6im-mK-X2R" secondAttribute="top" constant="44" id="C2C-uX-hBV"/>
                 <constraint firstItem="eSi-qO-Pd1" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Hlc-VN-VkB"/>
                 <constraint firstItem="QS6-rL-aVs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="LdK-Jc-ZWq"/>
+                <constraint firstItem="K8I-Ed-Ux1" firstAttribute="top" secondItem="dz0-k2-YNk" secondAttribute="bottom" constant="33" id="Mcg-xZ-55I"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QS6-rL-aVs" secondAttribute="bottom" id="QOp-A7-ncM"/>
                 <constraint firstItem="6im-mK-X2R" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="Zcg-YY-aOq"/>
+                <constraint firstItem="dz0-k2-YNk" firstAttribute="width" secondItem="eSi-qO-Pd1" secondAttribute="width" multiplier="0.789855" id="bNb-8r-HEd"/>
+                <constraint firstItem="dz0-k2-YNk" firstAttribute="centerX" secondItem="eSi-qO-Pd1" secondAttribute="centerX" id="dDX-y6-Ekg"/>
                 <constraint firstItem="hiN-jX-9Kg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fij-B8-4fD"/>
+                <constraint firstItem="dz0-k2-YNk" firstAttribute="centerY" secondItem="eSi-qO-Pd1" secondAttribute="centerY" id="geA-Ew-SX3"/>
                 <constraint firstItem="eSi-qO-Pd1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hwl-jE-Eh0"/>
                 <constraint firstItem="hiN-jX-9Kg" firstAttribute="top" secondItem="K8I-Ed-Ux1" secondAttribute="bottom" constant="4" id="kxe-R0-AfP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hiN-jX-9Kg" secondAttribute="bottom" constant="78" id="mSq-Jo-BXg"/>

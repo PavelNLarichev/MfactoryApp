@@ -94,8 +94,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         TableQuestion.backgroundColor = UIColor.clear
         registerForKeybordNotification()
         
-      
-        
+        let checkOutButton = UIBarButtonItem(title: "Проверить", style: .plain, target: self, action: #selector(checkOut))
+        self.navigationItem.rightBarButtonItem = checkOutButton
         
     }
     deinit{
@@ -123,6 +123,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         TableQuestion.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
+    @objc func checkOut(){
+        //функция проверки задания
+    }
    
     
 }

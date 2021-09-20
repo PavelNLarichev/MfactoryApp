@@ -9,22 +9,61 @@ import UIKit
 
 class rootScreen: UIViewController {
     
-    var countTaskTemp = 5 //количество вопросов по умолчанию, в эту же переменную хочу получать значение с синего экрана настроек
+    var countTaskTemp = 5 //количество вопросов по умолчанию. в эту переменную приходит значение с экрана Параметры
     
     
     
-    @IBAction func multiplyByOneButton(_ sender: Any) {
+    @IBOutlet weak var textOnBoardLabel: UILabel!
+    
+    
+    @IBAction func multiplyByOneButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyByOneText
+    }
+    
+    @IBAction func multiplyByTwoButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyByTwoText
+    }
+    
+    @IBAction func multiplyByThreeButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyByThreeText
+    }
+    
+    @IBAction func multiplyByFourButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyByFourText
+    }
+    
+    @IBAction func multiplyByFiveButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyByFiveText
+    }
+    
+    @IBAction func multiplyBySixButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyBySixText
+    }
+    @IBAction func multiplyBySevenButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyBySevenText
+    }
+    @IBAction func multiplyByEightButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyByEightText
+    }
+    
+    @IBAction func multiplyByNineButton(_ sender: UIButton) {
+        textOnBoardLabel.text = multiplyByNineText
     }
     
     @IBAction func startButton(_ sender: UIButton) {
+        
         let tvc = TableViewController(numberOfQuestions: countTaskTemp, nibName: "TableViewController", bundle: nil)
         self.navigationController?.pushViewController(tvc, animated: true)
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Главная"
-        
+        textOnBoardLabel.text = multiplyByTwoText
+        textOnBoardLabel.setSizeFont(sizeFont: 25)
+        textOnBoardLabel.textColor = .white
         self.navigationController?.navigationBar.backgroundColor = .clear
         //        let tvc = TableViewController(numberOfQuestions: 10, nibName: "TableViewController", bundle: nil)
         //        self.navigationController?.pushViewController(tvc, animated: true)
