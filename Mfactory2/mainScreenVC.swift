@@ -29,6 +29,7 @@ class mainScreenVC: UIViewController {
     }
     @IBAction func startButton(_ sender: UIButton) {
         let tableVC = TableViewController(numberOfQuestions: countTaskTemp, nibName: "TableViewController", bundle: nil)
+ 
         tableVC.modalPresentationStyle = .overFullScreen
         tableVC.modalTransitionStyle = self.modalTransitionStyle
         
@@ -43,22 +44,10 @@ class mainScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         countTaskLabel.text = "\(Int(round(countTaskSlider.value)))"
-        // Do any additional setup after loading the view.
+       
+        
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let dvc = segue.destination as? TableViewController else {return}
-//        dvc.numberOfQuestions = countTaskTemp
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

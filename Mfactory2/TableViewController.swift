@@ -50,6 +50,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
           super.init(nibName: nibName, bundle: bundle)
       }
     
+   
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -70,7 +72,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let object = multiplyByTwo[indexPath.row] // достаем объект массива по indexPath
         cell.backgroundColor = UIColor.clear
         cell.set(object: object)
-
+        
         //---- наполняем таблицу случайными элементами массива
 //        guard let object = multiplyByTwo.randomElement() else { return cell}
 //         cell.backgroundColor = UIColor.clear
@@ -88,12 +90,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         TableQuestion.delegate = self
         TableQuestion.dataSource = self
         TableQuestion.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "questionCell")
-       // TableQuestion.rowHeight = 80
+
         TableQuestion.backgroundColor = UIColor.clear
         registerForKeybordNotification()
-       
         
-        // Do any additional setup after loading the view.
+      
+        
+        
     }
     deinit{
         removeKeyboardNotification ()
@@ -120,4 +123,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         TableQuestion.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
+   
+    
 }
