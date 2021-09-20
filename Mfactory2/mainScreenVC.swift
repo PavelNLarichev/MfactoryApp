@@ -18,7 +18,7 @@ class mainScreenVC: UIViewController {
         didSet {
             countTaskSlider.maximumValue = 19
             countTaskSlider.minimumValue = 1
-            countTaskSlider.value = 1
+            countTaskSlider.value = 10
         }
     }
     
@@ -49,6 +49,8 @@ class mainScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         countTaskLabel.text = "\(Int(round(countTaskSlider.value)))"
+        title = "Параметры"
+
        
         
     }
