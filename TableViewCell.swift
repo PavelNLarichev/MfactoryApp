@@ -34,22 +34,38 @@ class TableViewCell: UITableViewCell {
         self.questionLabel.text = object.question
         self.answerTF.backgroundColor = .gray
     
-        self.answerTF.text = ""
+        self.answerTF.text = task?.userAnswer
+        
+        if task?.isTrue == nil  {
+            self.answerTF.backgroundColor = .gray
+                } else if task?.isTrue == true {
+                    self.answerTF.backgroundColor = .green
+                }
+        else {
+            self.answerTF.backgroundColor = .red
+            
+        }
+        
         answerTF.addTarget(self, action: #selector(textFieldDidChange(_:)),
                                   for: .editingChanged)
+  
     }
    
     @objc func textFieldDidChange(_ textField: UITextField) {
         //print(textField.text)
-        
+        task?.userAnswer = textField.text
             
         if self.answerTF.text == task?.answer {
             //print(countTrueAnswer)
                 //self.isTrueLabel.text = "🟢"
+            task?.isTrue = true
+            //print(task?.isTrue)
             self.answerTF.backgroundColor = .green
                 } else {
                    // self.isTrueLabel.text = "🔴"
+                    task?.isTrue = false
                     self.answerTF.backgroundColor = .red
+                    
                 }
             
     }

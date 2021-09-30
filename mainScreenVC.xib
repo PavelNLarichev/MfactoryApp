@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Copy" translatesAutoresizingMaskIntoConstraints="NO" id="ntJ-cH-Fd5">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon_question" translatesAutoresizingMaskIntoConstraints="NO" id="ntJ-cH-Fd5">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-0.5" maxValue="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZfR-oN-ab5">
@@ -34,19 +34,6 @@
                         <action selector="sliderTaskChange:" destination="-1" eventType="valueChanged" id="Usg-1t-dGq"/>
                     </connections>
                 </slider>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-kz-EdG">
-                    <rect key="frame" x="144.5" y="518" width="125" height="51"/>
-                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="51" id="3lL-s1-RoB"/>
-                        <constraint firstAttribute="width" constant="125" id="45S-9A-84X"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <state key="normal" title="Сохранить"/>
-                    <connections>
-                        <action selector="startButton:" destination="-1" eventType="touchUpInside" id="C0W-Gr-nwR"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oS5-8s-s0X">
                     <rect key="frame" x="157" y="363" width="100" height="76"/>
                     <constraints>
@@ -54,15 +41,29 @@
                         <constraint firstAttribute="height" constant="76" id="rj5-Q6-5sk"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="63"/>
-                    <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери количество заданий:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTJ-hN-bdH">
                     <rect key="frame" x="-10" y="264" width="434" height="91"/>
                     <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                    <color key="textColor" systemColor="systemGray4Color"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-kz-EdG">
+                    <rect key="frame" x="61" y="737.5" width="292" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="3lL-s1-RoB"/>
+                        <constraint firstAttribute="width" constant="292" id="45S-9A-84X"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <state key="normal" title="Сохранить" backgroundImage="button_2_n">
+                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startButton:" destination="-1" eventType="touchUpInside" id="C0W-Gr-nwR"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="eks-nH-3nK"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,11 +75,11 @@
                 <constraint firstItem="ZfR-oN-ab5" firstAttribute="centerX" secondItem="eks-nH-3nK" secondAttribute="centerX" id="Qh8-wP-bWX"/>
                 <constraint firstItem="ZfR-oN-ab5" firstAttribute="top" secondItem="oS5-8s-s0X" secondAttribute="bottom" constant="-1" id="SPH-Km-kqf"/>
                 <constraint firstItem="ntJ-cH-Fd5" firstAttribute="leading" secondItem="QNO-5g-AUw" secondAttribute="leading" id="XSJ-VP-R5v"/>
-                <constraint firstItem="GcH-kz-EdG" firstAttribute="top" secondItem="oS5-8s-s0X" secondAttribute="bottom" constant="79" id="Zfl-Y0-Dfv"/>
+                <constraint firstItem="GcH-kz-EdG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oS5-8s-s0X" secondAttribute="bottom" constant="79" id="Zfl-Y0-Dfv"/>
                 <constraint firstItem="ntJ-cH-Fd5" firstAttribute="leading" secondItem="eks-nH-3nK" secondAttribute="leading" id="f2T-Mv-cgI"/>
                 <constraint firstItem="mTJ-hN-bdH" firstAttribute="centerX" secondItem="eks-nH-3nK" secondAttribute="centerX" id="fn5-kZ-bwv"/>
                 <constraint firstItem="oS5-8s-s0X" firstAttribute="top" secondItem="mTJ-hN-bdH" secondAttribute="bottom" constant="8" symbolic="YES" id="ha3-TC-BKL"/>
-                <constraint firstItem="GcH-kz-EdG" firstAttribute="centerY" secondItem="eks-nH-3nK" secondAttribute="centerY" multiplier="1.2" id="lSs-YA-MJR"/>
+                <constraint firstItem="GcH-kz-EdG" firstAttribute="centerY" secondItem="eks-nH-3nK" secondAttribute="centerY" multiplier="1.7" id="lSs-YA-MJR"/>
                 <constraint firstItem="ZfR-oN-ab5" firstAttribute="centerY" secondItem="eks-nH-3nK" secondAttribute="centerY" id="nGy-VW-YkK"/>
                 <constraint firstItem="ntJ-cH-Fd5" firstAttribute="top" secondItem="QNO-5g-AUw" secondAttribute="top" id="puG-x9-Qj3"/>
                 <constraint firstItem="oS5-8s-s0X" firstAttribute="centerX" secondItem="ZfR-oN-ab5" secondAttribute="centerX" id="qT9-yk-mEt"/>
@@ -89,18 +90,10 @@
         </view>
     </objects>
     <resources>
-        <image name="Mask Copy" width="428" height="926"/>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="button_2_n" width="382" height="80"/>
+        <image name="fon_question" width="414" height="896"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

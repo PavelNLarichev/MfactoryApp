@@ -21,6 +21,7 @@
 		CC76F4D026F3664C00C74968 /* rootScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC76F4CE26F3664B00C74968 /* rootScreen.xib */; };
 		CC76F4D326F8FA3400C74968 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4D226F8FA3300C74968 /* extension.swift */; };
 		CC76F4D526F906F400C74968 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4D426F906F400C74968 /* data.swift */; };
+		CCA0B7CC27057F6500CC64BD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7CB27057F6500CC64BD /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CC76F4CE26F3664B00C74968 /* rootScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rootScreen.xib; sourceTree = "<group>"; };
 		CC76F4D226F8FA3300C74968 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		CC76F4D426F906F400C74968 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		CCA0B7CB27057F6500CC64BD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,6 @@
 		CC76F49526E9D7CD00C74968 = {
 			isa = PBXGroup;
 			children = (
-				CC76F4D426F906F400C74968 /* data.swift */,
-				CC76F4D226F8FA3300C74968 /* extension.swift */,
 				CC76F4A026E9D7CD00C74968 /* Mfactory2 */,
 				CC76F49F26E9D7CD00C74968 /* Products */,
 			);
@@ -74,21 +74,69 @@
 		CC76F4A026E9D7CD00C74968 /* Mfactory2 */ = {
 			isa = PBXGroup;
 			children = (
+				CC76F4AF26E9D7D000C74968 /* Info.plist */,
+				CCA0B7C22701DE8200CC64BD /* SupportingFiles */,
+				CCA0B7C02701DE6700CC64BD /* Views Controller */,
+				CCA0B7BF2701DE5600CC64BD /* Views */,
+				CCA0B7BD2701DE4100CC64BD /* Model */,
+				CCA0B7BB2701DE1700CC64BD /* Extension */,
+			);
+			path = Mfactory2;
+			sourceTree = "<group>";
+		};
+		CCA0B7BB2701DE1700CC64BD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CC76F4D226F8FA3300C74968 /* extension.swift */,
+			);
+			name = Extension;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CCA0B7BD2701DE4100CC64BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC76F4D426F906F400C74968 /* data.swift */,
+				CCA0B7CB27057F6500CC64BD /* Task.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CCA0B7BF2701DE5600CC64BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC76F4AC26E9D7D000C74968 /* LaunchScreen.storyboard */,
+				CC76F4B826E9D8E000C74968 /* TableViewCell.xib */,
+				CC76F4B726E9D8E000C74968 /* TableViewController.xib */,
+				CC76F4CA26EB2FAC00C74968 /* mainScreenVC.xib */,
+				CC76F4CE26F3664B00C74968 /* rootScreen.xib */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CCA0B7C02701DE6700CC64BD /* Views Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC76F4B626E9D8E000C74968 /* TableViewCell.swift */,
+				CC76F4B526E9D8E000C74968 /* TableViewController.swift */,
+				CC76F4C926EB2FAC00C74968 /* mainScreenVC.swift */,
+				CC76F4CD26F3664B00C74968 /* rootScreen.swift */,
+			);
+			name = "Views Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CCA0B7C22701DE8200CC64BD /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				CC76F4C126EA043500C74968 /* AppDelegate.swift */,
 				CC76F4BF26E9FB8700C74968 /* SceneDelegate.swift */,
 				CC76F4AA26E9D7D000C74968 /* Assets.xcassets */,
-				CC76F4AC26E9D7D000C74968 /* LaunchScreen.storyboard */,
-				CC76F4AF26E9D7D000C74968 /* Info.plist */,
-				CC76F4B626E9D8E000C74968 /* TableViewCell.swift */,
-				CC76F4B826E9D8E000C74968 /* TableViewCell.xib */,
-				CC76F4B526E9D8E000C74968 /* TableViewController.swift */,
-				CC76F4B726E9D8E000C74968 /* TableViewController.xib */,
-				CC76F4C926EB2FAC00C74968 /* mainScreenVC.swift */,
-				CC76F4CA26EB2FAC00C74968 /* mainScreenVC.xib */,
-				CC76F4CD26F3664B00C74968 /* rootScreen.swift */,
-				CC76F4CE26F3664B00C74968 /* rootScreen.xib */,
 			);
-			path = Mfactory2;
+			name = SupportingFiles;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +219,7 @@
 				CC76F4CB26EB2FAC00C74968 /* mainScreenVC.swift in Sources */,
 				CC76F4CF26F3664C00C74968 /* rootScreen.swift in Sources */,
 				CC76F4B926E9D8E000C74968 /* TableViewController.swift in Sources */,
+				CCA0B7CC27057F6500CC64BD /* Task.swift in Sources */,
 				CC76F4D526F906F400C74968 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

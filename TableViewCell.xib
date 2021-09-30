@@ -20,10 +20,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="138.5" height="55"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </stackView>
-                    <textField opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="21" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0DS-cG-Tq6">
-                        <rect key="frame" x="204" y="6.5" width="74" height="63"/>
+                    <textField opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0DS-cG-Tq6">
+                        <rect key="frame" x="204" y="6.5" width="80" height="63"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="74" id="Hbw-KQ-x2d"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Hbw-KQ-x2d"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="44"/>
                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -31,7 +31,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 × 2 =" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKR-yn-sYF">
                         <rect key="frame" x="21" y="10.5" width="177" height="55"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="55" id="CE5-FB-HSm"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="CE5-FB-HSm"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="gi0-EV-LHK"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
@@ -45,7 +45,7 @@
                     <constraint firstItem="EKR-yn-sYF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Dpd-7T-HuW"/>
                     <constraint firstItem="EKR-yn-sYF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10.5" id="FIw-xl-dnF"/>
                     <constraint firstItem="EKR-yn-sYF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lAV-4h-hVf"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0DS-cG-Tq6" secondAttribute="trailing" constant="40" id="pNg-5A-GGC"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0DS-cG-Tq6" secondAttribute="trailing" constant="20" id="pNg-5A-GGC"/>
                     <constraint firstAttribute="trailing" secondItem="EKR-yn-sYF" secondAttribute="trailing" constant="130" id="tB4-CD-6gR"/>
                     <constraint firstItem="0DS-cG-Tq6" firstAttribute="leading" secondItem="EKR-yn-sYF" secondAttribute="trailing" constant="6" id="vpk-62-Mxq"/>
                 </constraints>

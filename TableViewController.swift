@@ -7,13 +7,11 @@
 
 import UIKit
 
-struct Task {
-    var question: String
-    var answer: String
-   // var isTrue: Bool
-   // var attempt: Int
-}
 
+   
+
+
+var storageOfAnswers = [Int: String]() //создаем словарь для хранения ответов пользователя
 
 
 
@@ -69,9 +67,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as! TableViewCell
+        
         let object = multiplyByTwo[indexPath.row] // достаем объект массива по indexPath
+     
         cell.backgroundColor = UIColor.clear
         cell.set(object: object)
+       
         
         //---- наполняем таблицу случайными элементами массива
 //        guard let object = multiplyByTwo.randomElement() else { return cell}
@@ -94,8 +95,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         TableQuestion.backgroundColor = UIColor.clear
         registerForKeybordNotification()
         
-        let checkOutButton = UIBarButtonItem(title: "Проверить", style: .plain, target: self, action: #selector(checkOut))
-        self.navigationItem.rightBarButtonItem = checkOutButton
+        //кнопка "Проверить"
+//        let checkOutButton = UIBarButtonItem(title: "Проверить", style: .plain, target: self, action: #selector(checkOut))
+//        self.navigationItem.rightBarButtonItem = checkOutButton
         
     }
     deinit{

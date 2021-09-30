@@ -62,8 +62,9 @@ class rootScreen: UIViewController {
         super.viewDidLoad()
         title = "Главная"
         textOnBoardLabel.text = multiplyByTwoText
-        textOnBoardLabel.setSizeFont(sizeFont: 25)
+       textOnBoardLabel.setSizeFont(sizeFont: 24)
         textOnBoardLabel.textColor = .white
+        
         self.navigationController?.navigationBar.backgroundColor = .clear
         //        let tvc = TableViewController(numberOfQuestions: 10, nibName: "TableViewController", bundle: nil)
         //        self.navigationController?.pushViewController(tvc, animated: true)

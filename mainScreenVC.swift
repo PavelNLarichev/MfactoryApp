@@ -9,7 +9,7 @@ import UIKit
 
 class mainScreenVC: UIViewController {
 
-    var countTaskTemp = 0
+    var countTaskTemp = 10
     
     @IBOutlet weak var countTaskLabel: UILabel!
     
