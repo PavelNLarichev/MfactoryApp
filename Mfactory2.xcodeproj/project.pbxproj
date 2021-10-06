@@ -21,7 +21,11 @@
 		CC76F4D026F3664C00C74968 /* rootScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC76F4CE26F3664B00C74968 /* rootScreen.xib */; };
 		CC76F4D326F8FA3400C74968 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4D226F8FA3300C74968 /* extension.swift */; };
 		CC76F4D526F906F400C74968 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4D426F906F400C74968 /* data.swift */; };
-		CCA0B7CC27057F6500CC64BD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7CB27057F6500CC64BD /* Task.swift */; };
+		CCA0B7CC27057F6500CC64BD /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7CB27057F6500CC64BD /* TaskData.swift */; };
+		CCA0B7EE2705869A00CC64BD /* NetworkTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7ED2705869A00CC64BD /* NetworkTaskManager.swift */; };
+		CCA0B7F027059BBE00CC64BD /* TaskDataJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7EF27059BBE00CC64BD /* TaskDataJSON.swift */; };
+		CCA0B7F2270AE60300CC64BD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7F1270AE60300CC64BD /* Config.swift */; };
+		CCA0B7F4270B191900CC64BD /* extensionNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7F3270B191800CC64BD /* extensionNavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +45,11 @@
 		CC76F4CE26F3664B00C74968 /* rootScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rootScreen.xib; sourceTree = "<group>"; };
 		CC76F4D226F8FA3300C74968 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		CC76F4D426F906F400C74968 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
-		CCA0B7CB27057F6500CC64BD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		CCA0B7CB27057F6500CC64BD /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
+		CCA0B7ED2705869A00CC64BD /* NetworkTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTaskManager.swift; sourceTree = "<group>"; };
+		CCA0B7EF27059BBE00CC64BD /* TaskDataJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataJSON.swift; sourceTree = "<group>"; };
+		CCA0B7F1270AE60300CC64BD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CCA0B7F3270B191800CC64BD /* extensionNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionNavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				CC76F4D226F8FA3300C74968 /* extension.swift */,
+				CCA0B7F3270B191800CC64BD /* extensionNavigationBar.swift */,
 			);
 			name = Extension;
 			path = ..;
@@ -97,7 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				CC76F4D426F906F400C74968 /* data.swift */,
-				CCA0B7CB27057F6500CC64BD /* Task.swift */,
+				CCA0B7CB27057F6500CC64BD /* TaskData.swift */,
+				CCA0B7ED2705869A00CC64BD /* NetworkTaskManager.swift */,
+				CCA0B7EF27059BBE00CC64BD /* TaskDataJSON.swift */,
+				CCA0B7F1270AE60300CC64BD /* Config.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -212,15 +224,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA0B7F027059BBE00CC64BD /* TaskDataJSON.swift in Sources */,
 				CC76F4C226EA043500C74968 /* AppDelegate.swift in Sources */,
 				CC76F4D326F8FA3400C74968 /* extension.swift in Sources */,
 				CC76F4C026E9FB8700C74968 /* SceneDelegate.swift in Sources */,
 				CC76F4BA26E9D8E000C74968 /* TableViewCell.swift in Sources */,
+				CCA0B7F2270AE60300CC64BD /* Config.swift in Sources */,
 				CC76F4CB26EB2FAC00C74968 /* mainScreenVC.swift in Sources */,
 				CC76F4CF26F3664C00C74968 /* rootScreen.swift in Sources */,
 				CC76F4B926E9D8E000C74968 /* TableViewController.swift in Sources */,
-				CCA0B7CC27057F6500CC64BD /* Task.swift in Sources */,
+				CCA0B7EE2705869A00CC64BD /* NetworkTaskManager.swift in Sources */,
+				CCA0B7CC27057F6500CC64BD /* TaskData.swift in Sources */,
 				CC76F4D526F906F400C74968 /* data.swift in Sources */,
+				CCA0B7F4270B191900CC64BD /* extensionNavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T26M7F7ZW9;
 				INFOPLIST_FILE = Mfactory2/Info.plist;
@@ -378,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T26M7F7ZW9;
 				INFOPLIST_FILE = Mfactory2/Info.plist;

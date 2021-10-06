@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="328" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vnj-6P-emX">
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vnj-6P-emX">
                         <rect key="frame" x="0.0" y="0.0" width="138.5" height="55"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </stackView>
                     <textField opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0DS-cG-Tq6">
                         <rect key="frame" x="204" y="6.5" width="80" height="63"/>
@@ -42,9 +42,12 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="EKR-yn-sYF" secondAttribute="bottom" constant="10.5" id="2up-Mn-DI6"/>
                     <constraint firstItem="0DS-cG-Tq6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7uS-pJ-vrD"/>
+                    <constraint firstItem="vnj-6P-emX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9ox-6e-6mL"/>
                     <constraint firstItem="EKR-yn-sYF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Dpd-7T-HuW"/>
                     <constraint firstItem="EKR-yn-sYF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10.5" id="FIw-xl-dnF"/>
-                    <constraint firstItem="EKR-yn-sYF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lAV-4h-hVf"/>
+                    <constraint firstItem="vnj-6P-emX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZG1-hP-2IC"/>
+                    <constraint firstItem="EKR-yn-sYF" firstAttribute="centerY" secondItem="vnj-6P-emX" secondAttribute="centerY" constant="10.5" id="lAV-4h-hVf"/>
+                    <constraint firstItem="0DS-cG-Tq6" firstAttribute="leading" secondItem="vnj-6P-emX" secondAttribute="trailing" constant="65.5" id="nwz-Mp-LRp"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0DS-cG-Tq6" secondAttribute="trailing" constant="20" id="pNg-5A-GGC"/>
                     <constraint firstAttribute="trailing" secondItem="EKR-yn-sYF" secondAttribute="trailing" constant="130" id="tB4-CD-6gR"/>
                     <constraint firstItem="0DS-cG-Tq6" firstAttribute="leading" secondItem="EKR-yn-sYF" secondAttribute="trailing" constant="6" id="vpk-62-Mxq"/>

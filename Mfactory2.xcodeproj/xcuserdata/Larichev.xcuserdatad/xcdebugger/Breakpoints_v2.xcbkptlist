@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7B6185AC-473A-4A7C-9D81-DCAC69D99B5F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADFF5637-CE74-4FD3-BCF3-827E42B00DB6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mfactory2/TableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "TableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "ADFF5637-CE74-4FD3-BCF3-827E42B00DB6 - ef2f74865c808ef7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mfactory2.TableViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Mfactory2.TableViewController"
+                  moduleName = "Mfactory2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Larichev/Downloads/Mfactory2/Mfactory2/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "ADFF5637-CE74-4FD3-BCF3-827E42B00DB6 - 3ace4dd530f8ac22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mfactory2.TableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Mfactory2.TableViewController"
+                  moduleName = "Mfactory2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Larichev/Downloads/Mfactory2/Mfactory2/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "178">
+               </Location>
+               <Location
+                  uuid = "ADFF5637-CE74-4FD3-BCF3-827E42B00DB6 - 8a898b198ed5cbff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mfactory2.TableViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Mfactory2.TableViewController&gt;"
+                  moduleName = "Mfactory2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Larichev/Downloads/Mfactory2/Mfactory2/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "ADFF5637-CE74-4FD3-BCF3-827E42B00DB6 - 645cf460f18eda7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mfactory2.TableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Mfactory2.TableViewController&gt;"
+                  moduleName = "Mfactory2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Larichev/Downloads/Mfactory2/Mfactory2/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "134">
+               </Location>
+               <Location
+                  uuid = "ADFF5637-CE74-4FD3-BCF3-827E42B00DB6 - 8e95dd9187dbe695"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mfactory2.TableViewController.__deallocating_deinit"
+                  moduleName = "Mfactory2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Larichev/Downloads/Mfactory2/Mfactory2/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

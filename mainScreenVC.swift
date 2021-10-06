@@ -9,10 +9,14 @@ import UIKit
 
 class mainScreenVC: UIViewController {
 
-    var countTaskTemp = 10
+    var countTaskTemp = Config.countTask
+    var isMixTask = Config.isMixTask
     
     @IBOutlet weak var countTaskLabel: UILabel!
     
+    @IBOutlet weak var mixTaskLabel: UILabel!
+    
+    @IBOutlet weak var mixTaskSwitch: UISwitch!
     
     @IBOutlet weak var countTaskSlider: UISlider!{
         didSet {
@@ -22,34 +26,33 @@ class mainScreenVC: UIViewController {
         }
     }
     
+
+    
+    @IBAction func mixTaskSwitch(_ sender: UISwitch) {
+        isMixTask = 1
+        print(isMixTask)
+    }
     // Замыкание, которое будем вызывать на экране с которого отображаем этот экран
-    var result: ((Int) -> Void)?
+    var setCountTaskTempForRootScreen: ((Int) -> Void)?
+    var setIsMixTaskForRootScreen:((Int) -> Void)?
     
     @IBAction func sliderTaskChange(_ sender: UISlider) {
         let countTask = Int(round(sender.value))
         countTaskLabel.text = "\(countTask)"
         countTaskTemp = countTask
     }
-    @IBAction func startButton(_ sender: UIButton) {
-        result?(countTaskTemp)
-            
-//                let tableVC = TableViewController(numberOfQuestions: countTaskTemp, nibName: "TableViewController", bundle: nil)
-//
-//        tableVC.modalPresentationStyle = .overFullScreen
-//        tableVC.modalTransitionStyle = self.modalTransitionStyle
-//
-//        self.present(tableVC, animated: true, completion: nil)
-        
-        // show(tableVC, sender: nil) //идентифкатор Segue
-    
-    }
+    @IBAction func startButton(_ sender: UIButton) { //кнопка Сохранить
+        setCountTaskTempForRootScreen?(countTaskTemp)
+        setIsMixTaskForRootScreen?(isMixTask)
+            }
     
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         countTaskLabel.text = "\(Int(round(countTaskSlider.value)))"
-        title = "Параметры"
+      title = "Параметры"
+        
 
        
         

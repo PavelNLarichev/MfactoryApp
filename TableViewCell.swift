@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    var task: Task?
+    var task: TaskData?
     
     @IBOutlet weak var isTrueLabel: UILabel!
     
@@ -28,10 +28,10 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func set (object : Task){
+    func set (object : TaskData){
         self.task = object
-        //self.isTrueLabel.text = "?"
         self.questionLabel.text = object.question
+        self.questionLabel.textColor = .black
         self.answerTF.backgroundColor = .gray
     
         self.answerTF.text = task?.userAnswer
@@ -56,13 +56,10 @@ class TableViewCell: UITableViewCell {
         task?.userAnswer = textField.text
             
         if self.answerTF.text == task?.answer {
-            //print(countTrueAnswer)
-                //self.isTrueLabel.text = "🟢"
             task?.isTrue = true
             //print(task?.isTrue)
             self.answerTF.backgroundColor = .green
                 } else {
-                   // self.isTrueLabel.text = "🔴"
                     task?.isTrue = false
                     self.answerTF.backgroundColor = .red
                     
