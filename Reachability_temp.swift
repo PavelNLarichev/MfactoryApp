@@ -1,15 +1,15 @@
-////
-////  Reachability.swift
-////  Mfactory2
-////
-////  Created by Павел Ларичев on 08.10.2021.
-////
 //
+//  Reachability.swift
+//  Mfactory2
 //
-//import UIKit
+//  Created by Павел Ларичев on 08.10.2021.
 //
-//class ViewController: UIViewController {
-//    
+
+
+import UIKit
+
+class ViewController: UIViewController {
+    
 //    var reachability: Reachability?
 //    
 //    override func viewDidLoad() {
@@ -61,17 +61,17 @@
 //        
 //
 //    }
-//    
-//    
+    
+    
 //    func anyTapped() {
 //        if reachability?.connection == .unavailable || reachability?.connection == .none {
 //            print("Алерт СУКА!!!!")
 //        } else {
-//            
+//
 //        }
 //    }
 //    deinit {
 //        stopNotifier()
 //    }
-//}
-//
+}
+

@@ -18,11 +18,71 @@ class rootScreen: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    //наблюдение за ниличем сетевого соединения
+    var reachability: Reachability?
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        stopNotifier()
+//        setupReachability("google.com", useClosures: false)
+//        startNotifier()
+//    }
+
+    
+    func setupReachability(_ hostName: String?, useClosures: Bool) {
+        let reachability: Reachability?
+        if let hostName = hostName {
+            reachability = try? Reachability(hostname: hostName)
+        } else {
+            reachability = try? Reachability()
+        }
+        self.reachability = reachability
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(reachabilityChanged(_:)),
+            name: .reachabilityChanged,
+            object: reachability
+        )
+        
+    }
+    
+    func startNotifier() {
+        print("--- start notifier")
+        do {
+            try reachability?.startNotifier()
+        } catch {
+//            networkStatus.textColor = .red
+//            networkStatus.text = "Unable to start\nnotifier"
+            return
+        }
+    }
+    
+    func stopNotifier() {
+        print("--- stop notifier")
+        reachability?.stopNotifier()
+        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: nil)
+        reachability = nil
+    }
+
+    @objc func reachabilityChanged(_ note: Notification) {
+        let reachability = note.object as! Reachability
+        
+
+    }
+    // конец наблюдения
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
        navigationController?.navigationBar.customize()
         title = "Главная"
+        
+        stopNotifier()
+              setupReachability("google.com", useClosures: false)
+              startNotifier()
+        
         
         textOnBoardLabel.text = multiplyByTwoText
         textOnBoardLabel.setSizeFont(sizeFont: 36)
@@ -79,6 +139,15 @@ class rootScreen: UIViewController {
     
     @IBAction func startButton(_ sender: UIButton) {
         sender.isEnabled = false
+        
+        if reachability?.connection == .unavailable || reachability?.connection == .none {
+            let alert = UIAlertController(title: "Внимание", message: "Нет подключения к Интернет", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okButton)
+            present(alert, animated: true, completion: nil)
+        } else {
+
+    
         networkTaskManager.fetchSetTasks(forMultiplier: multiplier, countTask: countTaskTemp, isMixTask: isMixTask, completion: {data, message in
             if let data = data {
                 DispatchQueue.main.async {
@@ -89,6 +158,7 @@ class rootScreen: UIViewController {
 
             }
         })
+        }
 
 
     }
