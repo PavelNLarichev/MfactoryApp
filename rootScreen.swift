@@ -86,12 +86,17 @@ class rootScreen: UIViewController {
                     self.navigationController?.pushViewController(tvc, animated: true)
                     sender.isEnabled = true
                 }
-                
+
             }
         })
-    
-        
+
+
     }
+    
+    
+    
+    
+    
     
     
     

@@ -18,13 +18,14 @@ struct NetworkTaskManager{
             if let data = data {
 //                let dataString = String(data: data, encoding: .utf8)
 //                print(dataString!)
-                //создать замыкание 000
+               
 
                 self.parseJSON(withData: data, completion: completion)
                 
             }
         }
         task.resume()
+    
     }
     func parseJSON(withData data: Data, completion: @escaping ([TaskData]?, String?) -> Void){
         let decoder = JSONDecoder()

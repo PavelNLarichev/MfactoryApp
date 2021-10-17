@@ -53,9 +53,6 @@ class mainScreenVC: UIViewController {
         countTaskLabel.text = "\(Int(round(countTaskSlider.value)))"
       title = "Параметры"
         
-
-       
-        
     }
 
   

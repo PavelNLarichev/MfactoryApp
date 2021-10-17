@@ -57,11 +57,11 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         TableQuestion.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "questionCell")
         TableQuestion.backgroundColor = UIColor.clear
         //кнопка "Проверить"
-        let checkOutButton = UIBarButtonItem(title: "Проверить", style: .plain, target: self, action: #selector(checkOut))
-        self.navigationItem.rightBarButtonItem = checkOutButton
+//        let checkOutButton = UIBarButtonItem(title: "Проверить", style: .plain, target: self, action: #selector(checkOut))
+//        self.navigationItem.rightBarButtonItem = checkOutButton
         
         registerForKeybordNotification()
-        
+    
        
     }
     
