@@ -21,13 +21,13 @@
 		CC76F4D026F3664C00C74968 /* rootScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC76F4CE26F3664B00C74968 /* rootScreen.xib */; };
 		CC76F4D326F8FA3400C74968 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4D226F8FA3300C74968 /* extension.swift */; };
 		CC76F4D526F906F400C74968 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4D426F906F400C74968 /* data.swift */; };
+		CC8EAF77271C7B4200668C02 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EAF76271C7B4200668C02 /* Reachability.swift */; };
 		CCA0B7CC27057F6500CC64BD /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7CB27057F6500CC64BD /* TaskData.swift */; };
 		CCA0B7EE2705869A00CC64BD /* NetworkTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7ED2705869A00CC64BD /* NetworkTaskManager.swift */; };
 		CCA0B7F027059BBE00CC64BD /* TaskDataJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7EF27059BBE00CC64BD /* TaskDataJSON.swift */; };
 		CCA0B7F2270AE60300CC64BD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7F1270AE60300CC64BD /* Config.swift */; };
 		CCA0B7F4270B191900CC64BD /* extensionNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7F3270B191800CC64BD /* extensionNavigationBar.swift */; };
 		CCA0B81B2710153A00CC64BD /* Reachability_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B81A2710153A00CC64BD /* Reachability_temp.swift */; };
-		CCA0B81D271015B900CC64BD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B81C271015B900CC64BD /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,13 +47,13 @@
 		CC76F4CE26F3664B00C74968 /* rootScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rootScreen.xib; sourceTree = "<group>"; };
 		CC76F4D226F8FA3300C74968 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		CC76F4D426F906F400C74968 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		CC8EAF76271C7B4200668C02 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		CCA0B7CB27057F6500CC64BD /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
 		CCA0B7ED2705869A00CC64BD /* NetworkTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTaskManager.swift; sourceTree = "<group>"; };
 		CCA0B7EF27059BBE00CC64BD /* TaskDataJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataJSON.swift; sourceTree = "<group>"; };
 		CCA0B7F1270AE60300CC64BD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CCA0B7F3270B191800CC64BD /* extensionNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionNavigationBar.swift; sourceTree = "<group>"; };
 		CCA0B81A2710153A00CC64BD /* Reachability_temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability_temp.swift; sourceTree = "<group>"; };
-		CCA0B81C271015B900CC64BD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = "../../../Downloads/Reachability.swift-master/Sources/Reachability.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,10 +148,10 @@
 		CCA0B7C22701DE8200CC64BD /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				CCA0B81C271015B900CC64BD /* Reachability.swift */,
 				CC76F4C126EA043500C74968 /* AppDelegate.swift */,
 				CC76F4BF26E9FB8700C74968 /* SceneDelegate.swift */,
 				CC76F4AA26E9D7D000C74968 /* Assets.xcassets */,
+				CC8EAF76271C7B4200668C02 /* Reachability.swift */,
 			);
 			name = SupportingFiles;
 			path = ..;
@@ -238,7 +238,7 @@
 				CC76F4BA26E9D8E000C74968 /* TableViewCell.swift in Sources */,
 				CCA0B7F2270AE60300CC64BD /* Config.swift in Sources */,
 				CC76F4CB26EB2FAC00C74968 /* mainScreenVC.swift in Sources */,
-				CCA0B81D271015B900CC64BD /* Reachability.swift in Sources */,
+				CC8EAF77271C7B4200668C02 /* Reachability.swift in Sources */,
 				CC76F4CF26F3664C00C74968 /* rootScreen.swift in Sources */,
 				CC76F4B926E9D8E000C74968 /* TableViewController.swift in Sources */,
 				CCA0B7EE2705869A00CC64BD /* NetworkTaskManager.swift in Sources */,
