@@ -8,26 +8,26 @@
 import UIKit
 
 class rootScreen: UIViewController {
-
+    
     var countTaskTemp = Config.countTask
     var isMixTask = Config.isMixTask
-    
     var multiplier = 2 // множитель для заданий
     var networkTaskManager = NetworkTaskManager()
+    var viewModel: TableViewViewModelType = ViewModel()
     
     
     @IBOutlet weak var startButton: UIButton!
     
-    //наблюдение за ниличем сетевого соединения
+    //наблюдение за наличием сетевого соединения
     var reachability: Reachability?
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        stopNotifier()
-//        setupReachability("google.com", useClosures: false)
-//        startNotifier()
-//    }
-
+    //    override func viewDidLoad() {
+    //        super.viewDidLoad()
+    //        stopNotifier()
+    //        setupReachability("google.com", useClosures: false)
+    //        startNotifier()
+    //    }
+    
     
     func setupReachability(_ hostName: String?, useClosures: Bool) {
         let reachability: Reachability?
@@ -37,7 +37,7 @@ class rootScreen: UIViewController {
             reachability = try? Reachability()
         }
         self.reachability = reachability
-
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(reachabilityChanged(_:)),
@@ -52,8 +52,8 @@ class rootScreen: UIViewController {
         do {
             try reachability?.startNotifier()
         } catch {
-//            networkStatus.textColor = .red
-//            networkStatus.text = "Unable to start\nnotifier"
+            //            networkStatus.textColor = .red
+            //            networkStatus.text = "Unable to start\nnotifier"
             return
         }
     }
@@ -64,35 +64,35 @@ class rootScreen: UIViewController {
         NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: nil)
         reachability = nil
     }
-
+    
     @objc func reachabilityChanged(_ note: Notification) {
-        let reachability = note.object as! Reachability
+        _ = note.object as! Reachability
         
-
+        
     }
     // конец наблюдения
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-       navigationController?.navigationBar.customize()
+        
+        navigationController?.navigationBar.customize()
         title = "Главная"
         
         stopNotifier()
-              setupReachability("google.com", useClosures: false)
-              startNotifier()
+        setupReachability("google.com", useClosures: false)
+        startNotifier()
         
         
         textOnBoardLabel.text = multiplyByTwoText
         textOnBoardLabel.setSizeFont(sizeFont: 36)
         textOnBoardLabel.textColor = .white
         
-       self.navigationController?.navigationBar.backgroundColor = .clear
-       
+        self.navigationController?.navigationBar.backgroundColor = .clear
+        
         
         let settingButton = UIBarButtonItem(title: "Параметры", style: .plain, target: self, action: #selector(tapSettingButton))
-      
+        
         self.navigationItem.rightBarButtonItem = settingButton
         
     }
@@ -137,38 +137,39 @@ class rootScreen: UIViewController {
         multiplier = 9
     }
     
-    @IBAction func startButton(_ sender: UIButton) {
-        sender.isEnabled = false
+    func reloadData() {
+        viewModel.arrayTasks
         
-        if reachability?.connection == .unavailable || reachability?.connection == .none {
+        let tvc = TableViewController(multiplyBy: self.viewModel.arrayTasks, nibName: "TableViewController", bundle: nil)
+        self.navigationController?.pushViewController(tvc, animated: true)
+        
+        
+    }
+    
+    
+    @IBAction func startButton(_ sender: UIButton) {
+        //sender.isEnabled = false
+        
+        if reachability?.connection == .unavailable || reachability?.connection == Reachability.Connection.unavailable {
             let alert = UIAlertController(title: "Внимание", message: "Нет подключения к Интернет", preferredStyle: .alert)
             let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(okButton)
             present(alert, animated: true, completion: nil)
         } else {
-
-    
-        networkTaskManager.fetchSetTasks(forMultiplier: multiplier, countTask: countTaskTemp, isMixTask: isMixTask, completion: {data, message in
-            if let data = data {
-                DispatchQueue.main.async {
-                    let tvc = TableViewController(multiplyBy: data, nibName: "TableViewController", bundle: nil)
-                    self.navigationController?.pushViewController(tvc, animated: true)
-                    sender.isEnabled = true
-                }
-
-            }
-        })
+            viewModel.onReady(forMultiplier: multiplier, countTask: countTaskTemp, isMixTask: isMixTask)
+            viewModel.bindToController = { self.reloadData() }
+            
+            //            networkTaskManager.fetchSetTasks(forMultiplier: multiplier, countTask: countTaskTemp, isMixTask: isMixTask, completion: {data, message in
+            //                if let data = data {
+            //                    DispatchQueue.main.async {
+            //                        let tvc = TableViewController(multiplyBy: data, nibName: "TableViewController", bundle: nil)
+            //                        self.navigationController?.pushViewController(tvc, animated: true)
+            //                        sender.isEnabled = true
+            //                    }
+            //                }
+            //            })
         }
-
-
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     @objc func tapSettingButton() {

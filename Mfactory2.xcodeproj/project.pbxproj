@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC234F38274CB58F0018267E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC234F37274CB58F0018267E /* ViewModel.swift */; };
+		CC234F3A274CB5E20018267E /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC234F39274CB5E20018267E /* TableViewCellViewModel.swift */; };
+		CC234F3D274CB6340018267E /* TableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC234F3C274CB6340018267E /* TableViewViewModelType.swift */; };
+		CC234F3F274CB6520018267E /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC234F3E274CB6520018267E /* TableViewCellViewModelType.swift */; };
 		CC76F4AB26E9D7D000C74968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC76F4AA26E9D7D000C74968 /* Assets.xcassets */; };
 		CC76F4AE26E9D7D000C74968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC76F4AC26E9D7D000C74968 /* LaunchScreen.storyboard */; };
 		CC76F4B926E9D8E000C74968 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76F4B526E9D8E000C74968 /* TableViewController.swift */; };
@@ -27,10 +31,13 @@
 		CCA0B7F027059BBE00CC64BD /* TaskDataJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7EF27059BBE00CC64BD /* TaskDataJSON.swift */; };
 		CCA0B7F2270AE60300CC64BD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7F1270AE60300CC64BD /* Config.swift */; };
 		CCA0B7F4270B191900CC64BD /* extensionNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B7F3270B191800CC64BD /* extensionNavigationBar.swift */; };
-		CCA0B81B2710153A00CC64BD /* Reachability_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0B81A2710153A00CC64BD /* Reachability_temp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC234F37274CB58F0018267E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CC234F39274CB5E20018267E /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
+		CC234F3C274CB6340018267E /* TableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelType.swift; sourceTree = "<group>"; };
+		CC234F3E274CB6520018267E /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
 		CC76F49E26E9D7CD00C74968 /* Mfactory2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mfactory2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC76F4AA26E9D7D000C74968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC76F4AD26E9D7D000C74968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,7 +60,6 @@
 		CCA0B7EF27059BBE00CC64BD /* TaskDataJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataJSON.swift; sourceTree = "<group>"; };
 		CCA0B7F1270AE60300CC64BD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CCA0B7F3270B191800CC64BD /* extensionNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionNavigationBar.swift; sourceTree = "<group>"; };
-		CCA0B81A2710153A00CC64BD /* Reachability_temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability_temp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC234F3B274CB6060018267E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CC234F3C274CB6340018267E /* TableViewViewModelType.swift */,
+				CC234F3E274CB6520018267E /* TableViewCellViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		CC76F49526E9D7CD00C74968 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +107,7 @@
 				CCA0B7BF2701DE5600CC64BD /* Views */,
 				CCA0B7BD2701DE4100CC64BD /* Model */,
 				CCA0B7BB2701DE1700CC64BD /* Extension */,
+				CC234F3B274CB6060018267E /* Protocols */,
 			);
 			path = Mfactory2;
 			sourceTree = "<group>";
@@ -114,6 +130,8 @@
 				CCA0B7ED2705869A00CC64BD /* NetworkTaskManager.swift */,
 				CCA0B7EF27059BBE00CC64BD /* TaskDataJSON.swift */,
 				CCA0B7F1270AE60300CC64BD /* Config.swift */,
+				CC234F37274CB58F0018267E /* ViewModel.swift */,
+				CC234F39274CB5E20018267E /* TableViewCellViewModel.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -139,7 +157,6 @@
 				CC76F4B526E9D8E000C74968 /* TableViewController.swift */,
 				CC76F4C926EB2FAC00C74968 /* mainScreenVC.swift */,
 				CC76F4CD26F3664B00C74968 /* rootScreen.swift */,
-				CCA0B81A2710153A00CC64BD /* Reachability_temp.swift */,
 			);
 			name = "Views Controller";
 			path = ..;
@@ -230,20 +247,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCA0B81B2710153A00CC64BD /* Reachability_temp.swift in Sources */,
 				CCA0B7F027059BBE00CC64BD /* TaskDataJSON.swift in Sources */,
 				CC76F4C226EA043500C74968 /* AppDelegate.swift in Sources */,
 				CC76F4D326F8FA3400C74968 /* extension.swift in Sources */,
 				CC76F4C026E9FB8700C74968 /* SceneDelegate.swift in Sources */,
 				CC76F4BA26E9D8E000C74968 /* TableViewCell.swift in Sources */,
 				CCA0B7F2270AE60300CC64BD /* Config.swift in Sources */,
+				CC234F3A274CB5E20018267E /* TableViewCellViewModel.swift in Sources */,
 				CC76F4CB26EB2FAC00C74968 /* mainScreenVC.swift in Sources */,
 				CC8EAF77271C7B4200668C02 /* Reachability.swift in Sources */,
+				CC234F3D274CB6340018267E /* TableViewViewModelType.swift in Sources */,
 				CC76F4CF26F3664C00C74968 /* rootScreen.swift in Sources */,
 				CC76F4B926E9D8E000C74968 /* TableViewController.swift in Sources */,
+				CC234F38274CB58F0018267E /* ViewModel.swift in Sources */,
 				CCA0B7EE2705869A00CC64BD /* NetworkTaskManager.swift in Sources */,
 				CCA0B7CC27057F6500CC64BD /* TaskData.swift in Sources */,
 				CC76F4D526F906F400C74968 /* data.swift in Sources */,
+				CC234F3F274CB6520018267E /* TableViewCellViewModelType.swift in Sources */,
 				CCA0B7F4270B191900CC64BD /* extensionNavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -368,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

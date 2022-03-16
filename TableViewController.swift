@@ -10,52 +10,76 @@ import UIKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var TableQuestion: UITableView!
+    @IBOutlet weak var questionsTable: UITableView!
+
     
-    var multiplyBy = [TaskData]()
-    
+    var  multiplyBy = [TaskData]()
+
+
     
     init(multiplyBy: [TaskData], nibName: String?, bundle: Bundle?) {
         self.multiplyBy = multiplyBy
         super.init(nibName: nibName, bundle: bundle)
     }
     
-    
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return multiplyBy.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return multiplyBy.count    }
+    
+   
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as! TableViewCell
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as? TableViewCell
+
+        guard let tabelViewCell = cell else {
+            return UITableViewCell()
+        }
+
+        let task = multiplyBy[indexPath.row]
+        let cellViewModel = TableViewCellViewModel(task: task)
+
+        tabelViewCell.viewModel = cellViewModel
         
-        let object = multiplyBy[indexPath.row] // достаем объект массива по indexPath
-        
-        cell.backgroundColor = UIColor.clear
-        cell.set(object: object)
-        
-        
-        return cell
+        tabelViewCell.onUserAnswerChanged = { userAnswer in
+            task.userAnswer = userAnswer
+            cellViewModel.userAnswer = userAnswer
+            
+            // Заметка: вместо этого наверное можно поле isTrue сделать генерируемым, по данным из viewModel
+            if
+                let userAnswer = userAnswer,
+                userAnswer != ""
+            {
+                cellViewModel.isTrue = userAnswer == task.answer
+            } else {
+                cellViewModel.isTrue = nil
+            }
+            
+            // обновляем ячейку
+            tabelViewCell.viewModel = cellViewModel
+        }
+
+        return tabelViewCell
     }
     
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
-        TableQuestion.delegate = self
-        TableQuestion.dataSource = self
-        TableQuestion.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "questionCell")
-        TableQuestion.backgroundColor = UIColor.clear
+
+        questionsTable.delegate = self
+        questionsTable.dataSource = self
+        questionsTable.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "questionCell")
+        questionsTable.backgroundColor = UIColor.clear
         //кнопка "Проверить"
 //        let checkOutButton = UIBarButtonItem(title: "Проверить", style: .plain, target: self, action: #selector(checkOut))
 //        self.navigationItem.rightBarButtonItem = checkOutButton
@@ -84,11 +108,11 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @objc func kbWillShow(_ notification: Notification){
         let userInfo = notification.userInfo
         let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue //получаем значение высоты клавиатуры
-        TableQuestion.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: kbFrameSize.height + 30, right: 0)
+        questionsTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: kbFrameSize.height + 30, right: 0)
         // TableQuestion.contentOffset = CGPoint(x: 0, y: kbFrameSize.height)
     }
     @objc func kbWillHide(_ notification: Notification){
-        TableQuestion.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        questionsTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     @objc func checkOut(){
